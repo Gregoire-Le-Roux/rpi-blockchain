@@ -12,6 +12,16 @@ contract WeddingCertificate {
         partnerTwo = _partnerTwo;
     }
 
+    // Function to get the first partner
+    function getPartnerOne() public view returns (string memory success) {
+        return partnerOne;
+    }
+
+    // Function to get the second partner
+    function getPartnerTwo() public view returns (string memory success) {
+        return partnerTwo;
+    }
+
     // Function to get the name of the two partners
     function getPartners() public view returns (string memory success) {
         return string.concat("Partner 1 is ", partnerOne, " and Partner 2 is ", partnerTwo);
