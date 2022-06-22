@@ -8,7 +8,7 @@ Dans projets/mariage un README.md donne des informations supplémentaires sur le
 
 ## Projet Metaplex ##
 
-Ce projet sur Metaplex va être de mettre en place la Candy Machive v2 : https://docs.metaplex.com/candy-machine-v2/introduction
+Ce projet sur Metaplex va être de mettre en place la Candy Machive v2 : [Metaplex - Candy Machine v2](https://docs.metaplex.com/candy-machine-v2/introduction)
 Un docx est disponible avec toutes les manipulations réalisées pour faire ce projet et les résultats obtenus.
 
 
@@ -21,8 +21,11 @@ Le but de ce projet est d'éviter toutes les fraudes possibles des faux document
 BCdiploma est une des entreprises de digitalisation de documents les plus utilisée par les écoles dans le monde avec comme exemple l'université de Lille, EM Lyon Business School, VisionCompliance en Suisse, l'université de Mancosca en Afrique du Sud, l'université HoaSen au Vietnam...
 	
 Sources :
+
 https://www.bcdiploma.com/
+
 https://www.evidenz.io/
+
 https://fr.wikipedia.org/wiki/BCdiploma
 
 
