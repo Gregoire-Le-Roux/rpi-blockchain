@@ -9,6 +9,7 @@ Dans projets/mariage un README.md donne des informations supplémentaires sur le
 ## Projet Metaplex ##
 
 Ce projet sur Metaplex va être de mettre en place la Candy Machive v2 : [Metaplex - Candy Machine v2](https://docs.metaplex.com/candy-machine-v2/introduction)
+
 Un docx est disponible avec toutes les manipulations réalisées pour faire ce projet et les résultats obtenus.
 
 
