@@ -36,3 +36,7 @@ Tout d'abord, ERC20 et ERC721 sont deux standard de smart contract de la blockch
 Dans le cas de ERC20, tous les tokens ont la même valeur et ne sont pas différenciable mais pour ERC721, ces jetons-là sont uniques donc si nous avons un jeton d'ERC721 alors personne ne peut avoir exactement le même. 
 
 C'est cette principale propriété qui fait la différence entre les deux standard et les tokens d'ERC721 sont aussi appelées des Non-Fungible tokens (NFTs) et cela amène un aspect de collection de tokens que l'on peut lier avec des dessins, des images, des vidéos...
+
+## TP Blockchain ##
+
+Un dossier avec les consignes du TP Blockchain dans un pdf et les réponses dans un docx.
