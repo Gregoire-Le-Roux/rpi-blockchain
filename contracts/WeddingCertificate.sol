@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.13;
 
+// Contract to respect TP PART 2, the contract is different in the project mariage
+
 contract WeddingCertificate {
     // Declare two partners
     string public partnerOne;
