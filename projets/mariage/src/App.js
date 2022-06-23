@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { ethers } from 'ethers';
 import './App.css';
 
+import { addWeddingCertificate, fetchWeddingCertificates, fetchWeddingCertificateByContractAddress } from './api/WeddingCertificate';
+
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 
@@ -41,6 +43,11 @@ function App() {
         setPartnerOne(_partnerOne);
         const _partnerTwo = await contract.getPartnerTwo();
         setPartnerTwo(_partnerTwo);
+        // This is just a test to get all certificates and one in database
+        let allCertificates = await fetchWeddingCertificates();
+        console.log(allCertificates);
+        let oneCertificate = await fetchWeddingCertificateByContractAddress("0x5FbDB2315678afecb367f032d93F642f64180aa3");
+        console.log(oneCertificate);
       }
       catch (err) {
         console.log(err);
@@ -59,10 +66,22 @@ function App() {
       const contract = new ethers.Contract(weddingCertificateAddress, WeddingCertificate.abi, signer);
       // Set Partners Contract Method
       const transaction = await contract.setPartners(inputPartnerOne, inputPartnerTwo);
+      const resultTransaction = await transaction.wait();
+      // If transaction worked, we create in database the wedding certificate
+      if (resultTransaction.transactionHash !== undefined) {
+        let weddingCertificate = {
+          partnerOne: inputPartnerOne,
+          partnerTwo: inputPartnerTwo,
+          contractAddress: weddingCertificateAddress,
+          transactionHash: resultTransaction.transactionHash,
+        }
+        // Add to database wedding certificate
+        await addWeddingCertificate(weddingCertificate);
+      }
       // Reset Input Partners
       setInputPartnerOne('');
       setInputPartnerTwo('');
-      await transaction.wait();
+      // Update wedding certificate from contract
       fetchWeddingCertificate();
     }
   }
