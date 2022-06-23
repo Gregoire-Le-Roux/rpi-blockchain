@@ -2,14 +2,16 @@
 pragma solidity ^0.8.0;
 
 import "hardhat/console.sol";
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
-contract WeddingCertificate {
+contract WeddingCertificate is ERC20 {
     // Declare two partners
     string private partnerOne;
     string private partnerTwo;
 
     // Initialize value of the two partners
-    constructor(string memory _partnerOne, string memory _partnerTwo) {
+    constructor(uint256 initialSupply, string memory _partnerOne, string memory _partnerTwo) ERC20 ("GregToken", "GT") {
+        _mint(msg.sender, initialSupply);
         partnerOne = _partnerOne;
         partnerTwo = _partnerTwo;
     }

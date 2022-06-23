@@ -15,7 +15,7 @@ async function main() {
 
   // We get the contract to deploy
   const Wedding = await hre.ethers.getContractFactory("WeddingCertificate");
-  const wedding = await Wedding.deploy("", "");
+  const wedding = await Wedding.deploy(20, "", "");
 
   await wedding.deployed();
 
